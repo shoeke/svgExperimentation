@@ -1,0 +1,50 @@
+.holder {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.aniHere {
+  width: 600px;
+  height: 600px;
+  margin: 25px auto;
+  border: 2px solid gray;
+  float: left;
+  background-image: url("testKittyAni-01.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-color: rgb(244, 134, 134);
+  filter: drop-shadow(3px 3px 6px rgba(280, 15, 0, 0.5));
+}
+
+object {
+  width: 600px;
+  height: 600px;
+  margin: 25px auto;
+  border: 2px solid gray;
+  float: right;
+  filter: drop-shadow(3px 3px 6px rgba(280, 15, 0, 0.5));
+}
+
+object ::after {
+  content: "";
+  clear: both;
+}
+
+#whiteCat {
+  transform-origin: 30% 75%;
+  animation-name: wiggle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(5px 5px 3px black);
+}
+#greyCat {
+  transform-origin: 75% 30%;
+  animation-name: wiggle;
+  animation-duration: 1.5s;
+  animation-delay: .75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+50% {transform: rotate(5deg)}
+}
